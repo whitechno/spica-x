@@ -6,8 +6,10 @@ lazy val `hocon-x` = project
   .settings(
     commonSettings,
     libraryDependencies ++= Seq(
-      "com.github.whitechno.subutai" %% "hocon"  % "0.1.0-SNAPSHOT" % Test,
-      "com.typesafe"                  % "config" % "1.4.0"          % Test
+      // Test of {"repo":"subutai","module":"hocon"}
+      "com.github.whitechno.subutai" %% "hocon" % "0.1.0-SNAPSHOT" % Test,
+      // "com.typesafe" % "config" is "provided" in {"repo":"subutai","module":"hocon"}
+      "com.typesafe" % "config" % "1.4.0" % Test
     )
   )
 
