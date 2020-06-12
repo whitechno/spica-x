@@ -33,6 +33,6 @@ private object PrintClassLoaderMain extends App {
 
 private object ReadResourcesFromJarMain extends App {
   val stream: java.io.InputStream = getClass.getResourceAsStream("/spec/spec.xml")
-  val lines  = scala.io.Source.fromInputStream(stream).getLines
+  val lines: Iterator[String]     = scala.io.Source.fromInputStream(stream).getLines
   println(lines.mkString("\n"))
 }

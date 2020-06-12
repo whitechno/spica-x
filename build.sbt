@@ -2,7 +2,7 @@ ThisBuild / version      := "0.1.0-SNAPSHOT"
 ThisBuild / organization := "com.github.whitechno.spica-x"
 ThisBuild / scalaVersion := "2.12.11"
 
-lazy val `hocon-x` = project
+lazy val `subutai-hocon-test` = project
   .settings(
     commonSettings,
     libraryDependencies ++= Seq(
