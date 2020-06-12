@@ -30,3 +30,9 @@ private object PrintClassLoaderMain extends App {
   println("\n")
   printSystemClassLoader.foreach(println)
 }
+
+private object ReadResourcesFromJarMain extends App {
+  val stream: java.io.InputStream = getClass.getResourceAsStream("/spec/spec.xml")
+  val lines  = scala.io.Source.fromInputStream(stream).getLines
+  println(lines.mkString("\n"))
+}
